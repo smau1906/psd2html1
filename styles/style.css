@@ -247,16 +247,134 @@ button {
 	display: flex;
 	justify-content: space-between;
 	overflow: hidden;
-}
-.images__block{
-	width: 33.33%;
-	display: flex;
 	height: 100%;
 }
-images__block:first-child {
+.images{
+	display: flex;
+	height: 53.5rem;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.images__block{
+	display: flex;
+	width: 33.333%;
+	height: 100%;
+}
+.images__block:first-child{
 	flex-direction: column;
 }
+.images__block:last-child{
+	flex-direction: column-reverse;
+}
 .images__block-item{
-	height: 50%;
 	width: 100%;
+	height: 50%;
+}
+.images__block-item:first-of-type{
+	display: flex;
+}
+.images__block-item:first-of-type .images__item{
+	width: 50%;
+	height: 100%;
+}
+.images__block-item:last-of-type{
+	width: 100%;
+}
+.images__item-bg{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.images__item{
+	position: relative;
+	height: 100%;
+}
+.images__item:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #70c6a6c9;
+	z-index: 10;
+	display: none;
+}
+.images__item-brand{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
+	display: none;
+	text-align: center;
+}
+.images__item-brand > img{
+	margin: 0 auto;
+}
+.images__item-text{
+	text-transform: uppercase;
+	margin: 0.5rem auto 0 auto;
+	font-size: 1.6rem;
+	color: white;
+}
+.images__item:hover:before, .images__item:hover .images__item-brand{
+	display: block;
+}
+.discovery__container{
+	padding: 7rem 1.5rem;
+	background-color: var(--bg-dark);
+	text-align: center;
+}
+.discovery__btn{
+	display: inline-block;
+	min-width: 30rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: white;
+	padding: 2rem ;
+	border: 1px solid white;
+	transition: .2s linear;
+}
+.discovery__btn:hover{
+	background-color: #70c6a6;
+	border: .1rem solid #70c6a6;
+}
+.mail{
+	margin: 0 auto;
+	text-align: center;
+	padding: 2rem;
+}
+.mail__img{
+	margin: 8rem auto 3rem;
+}
+.mail__heading{
+	font-size: 2rem;
+	margin-bottom: 4rem;
+	color: var(--text);
+	font-style: italic;
+}
+.mail__form{
+	display: flex;
+	justify-content: space-between;
+	width: 54rem;
+	margin: 3.5rem auto;
+}
+.mail__form-inp{
+	width: 74%;
+	padding: 2.5rem;
+	font-size: 2rem;
+	color: var(--text);
+	font-style: italic;
+}
+.mail__form-btn{
+	width: 25%;
+	background-color: #70c6a6;
+	color: white;
+	border: none;
+	text-transform: uppercase;
+	font-size: 2rem;
+
 }
