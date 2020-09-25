@@ -106,7 +106,6 @@ button {
 	text-align: center;
 	font-size: 1.8rem;
 	margin: 0 auto;
-	min-width: 50rem;
 	line-height: 1.6;
 	max-width: 104rem;
 }
@@ -167,7 +166,8 @@ button {
 	transform: translateX(-50%);
 	width: 6rem;
 	height: 1px;
-	background-color: var(--bg-light);
+	background-color: var(--text);
+	z-index: 10;
 }
 .feature__item-text{
 	font-size: 1.6rem;
@@ -241,13 +241,6 @@ button {
 }
 .tweet__pagi-item.is-active{
 	background-color: var(--text);
-}
-.images{
-	height: 53.5rem;
-	display: flex;
-	justify-content: space-between;
-	overflow: hidden;
-	height: 100%;
 }
 .images{
 	display: flex;
@@ -376,5 +369,5 @@ button {
 	border: none;
 	text-transform: uppercase;
 	font-size: 2rem;
-
+	color: white;
 }
